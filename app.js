@@ -221,9 +221,11 @@
         mainEl.hidden = true;
         window.scrollTo(0, 0);
         if (!instant) {
-            setTimeout(function () { view.classList.add('pf-phase-in'); }, 40);
             setTimeout(function () {
                 view.classList.remove('pf-phase-pre');
+                view.classList.add('pf-phase-in');
+            }, 40);
+            setTimeout(function () {
                 view.classList.remove('pf-phase-in');
                 view.classList.add('pf-phase-solid');
             }, 1100);
