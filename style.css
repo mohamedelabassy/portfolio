@@ -430,3 +430,10 @@ html.pf-dark .pf-switch-knob { background: #4a423c; }
     .pf-row { flex-wrap: wrap; }
     .pf-row-value { width: 100%; padding-left: 48px; }
 }
+
+/* Intro videos */
+.pf-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 640px; }
+.pf-video-card { margin: 0; }
+.pf-video { display: block; width: 100%; aspect-ratio: 9 / 16; background: #000; border-radius: 14px; box-shadow: var(--ds-ring); }
+.pf-video-caption { margin-top: 8px; font-size: 12.5px; color: var(--ds-ink-2); text-align: center; }
+@media (max-width: 560px) { .pf-videos { gap: 10px; } }
