@@ -412,17 +412,6 @@ html.pf-dark .pf-contact-primary:hover { border-color: #6b9387; }
 html.pf-dark .pf-switch { background: #2c2622; }
 html.pf-dark .pf-switch-knob { background: #4a423c; }
 
-/* Reduced motion: everything settles instantly, nothing loops. */
-@media (prefers-reduced-motion: reduce) {
-    .pf-anim, .pf-card { transition: none; }
-    .pf-armed .pf-anim:not(.pf-in) { opacity: 1; transform: none; }
-    .pf-blob, .pf-hero-photo-wrap { animation: none; }
-    .pf-view, .pf-view-inner, .pf-back, .pf-view-head, .pf-view-desc, .pf-view-stores, .pf-view-shot { animation: none; transition: none; }
-    .pf-view.pf-phase-pre, .pf-phase-pre .pf-view-inner, .pf-phase-pre .pf-back, .pf-phase-pre .pf-view-head,
-    .pf-phase-pre .pf-view-desc, .pf-phase-pre .pf-view-stores, .pf-phase-pre .pf-view-shot { opacity: 1; transform: none; }
-    body, .pf-switch, .pf-switch-track, .pf-switch-knob, .pf-contact-chip, .pf-store-btn, .pf-num,
-    .pf-card-shot, .pf-open-arrow, .pf-back { transition: none; }
-}
 
 @media (max-width: 560px) {
     .pf-main { padding: 34px 18px 54px; }
@@ -440,4 +429,4 @@ html.pf-dark .pf-switch-knob { background: #4a423c; }
     .pf-view-shots { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .pf-row { flex-wrap: wrap; }
     .pf-row-value { width: 100%; padding-left: 48px; }
-                           }
+}

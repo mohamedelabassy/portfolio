@@ -252,11 +252,9 @@
     }
 
     /* Stat count-up */
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     Array.prototype.forEach.call(doc.querySelectorAll('.pf-stat-value'), function (el, idx) {
         var target = parseInt(el.getAttribute('data-target'), 10);
         var suffix = el.getAttribute('data-suffix') || '';
-        if (reducedMotion) { el.textContent = target + suffix; return; }
         el.textContent = '0' + suffix;
         var delay = 150 + idx * 150;
         setTimeout(function () {
@@ -274,7 +272,7 @@
 
     /* Scroll reveal */
     var els = Array.prototype.slice.call(doc.querySelectorAll('.pf-anim'));
-    if (!('IntersectionObserver' in window) || reducedMotion) {
+    if (!('IntersectionObserver' in window)) {
         els.forEach(function (el) { el.classList.add('pf-in'); });
     } else {
         html.classList.add('pf-armed');
